@@ -296,3 +296,54 @@ footer {
     padding:20px;
     line-height:1.8;
 }
+
+.contato-section{
+    width:90%;
+    max-width:700px;
+    margin:80px auto;
+}
+
+.contato-section h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#00ff88;
+}
+
+#formContato{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+#formContato input,
+#formContato textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+#feedback{
+    margin-top:20px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.foto-integrante{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    border:3px solid #00ff88;
+}
+
+.links{
+    margin-top:15px;
+}
+
+.links a{
+    color:#00ff88;
+    text-decoration:none;
+    margin:0 10px;
+}
