@@ -1,0 +1,49 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.monitor-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.monitor-card__icone {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.monitor-card__label {
+  font-weight: 600;
+  color: var(--verde-escuro);
+  margin-bottom: 0.5rem;
+}
+
+.monitor-card__valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--verde-claro);
+}
+
+.monitor-card__valor span {
+  font-size: 2rem;
+}
+
+.status-card .monitor-card__valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

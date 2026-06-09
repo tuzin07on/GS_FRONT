@@ -1,0 +1,64 @@
+.integrante-card {
+  background: var(--branco);
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  padding: 2rem;
+  text-align: center;
+  transition: transform var(--transicao);
+}
+
+.integrante-card:hover {
+  transform: translateY(-4px);
+}
+
+.integrante-card__foto {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--verde-claro);
+  background: var(--verde-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+.integrante-card__nome {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--verde-escuro);
+}
+
+.integrante-card__rm {
+  font-size: .85rem;
+  color: var(--cinza-medio);
+  margin-bottom: .25rem;
+}
+
+.integrante-card__turma {
+  font-size: .85rem;
+  color: var(--cinza-medio);
+  margin-bottom: 1rem;
+}
+
+.integrante-card__links {
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+}
+
+.integrante-card__link {
+  padding: .35rem .85rem;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 600;
+  border: 1.5px solid var(--verde-claro);
+  color: var(--verde-escuro);
+  transition: all var(--transicao);
+}
+
+.integrante-card__link:hover {
+  background: var(--verde-claro);
+  color: var(--branco);
+}
