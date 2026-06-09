@@ -7,42 +7,66 @@
 
 .monitor-card {
   text-align: center;
-  padding: 2rem 1.5rem;
-  background: var(--card);
+  padding: 1.5rem;
+  background: rgba(15, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: all var(--transicao);
+  position: relative;
+  overflow: hidden;
+}
+
+.monitor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  transition: left 0.5s;
+}
+
+.monitor-card:hover::before {
+  left: 100%;
 }
 
 .monitor-card:hover {
   transform: translateY(-4px);
   border-color: var(--green);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 
 .monitor-card__icone {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 5px var(--green));
 }
 
 .monitor-card__label {
   font-weight: 600;
   color: var(--green);
   margin-bottom: 0.5rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
 }
 
 .monitor-card__valor {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--white);
+  font-family: monospace;
 }
 
 .monitor-card__valor span {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--green);
 }
 
 .status-card .monitor-card__valor {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 

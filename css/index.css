@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(135deg, var(--black) 0%, var(--dark) 60%, #0a1a0f 100%);
+  background: linear-gradient(135deg, #000000 0%, #0a0a0f 50%, #001a0a 100%);
   color: var(--white);
   padding: 6rem 0 5rem;
   position: relative;
@@ -15,7 +15,17 @@
   width: 340px;
   height: 340px;
   border-radius: 50%;
-  background: rgba(34, 197, 94, 0.08);
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.1), transparent);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
 }
 
 .hero__inner {
@@ -34,20 +44,23 @@
   font-size: 2.6rem;
   line-height: 1.2;
   margin-bottom: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .hero__titulo em {
   color: var(--green);
   font-style: normal;
+  text-shadow: 0 0 15px var(--green);
 }
 
 .hero__desc {
-  font-size: 1.1rem;
+  font-size: 1rem;
   opacity: .88;
   margin-bottom: 2rem;
   line-height: 1.7;
   color: var(--gray);
+  font-family: monospace;
 }
 
 .hero__acoes {
@@ -63,25 +76,34 @@
 }
 
 .hero__card-alerta {
-  background: rgba(17, 24, 39, 0.8);
-  backdrop-filter: blur(8px);
+  background: rgba(10, 10, 20, 0.8);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   max-width: 340px;
-  animation: flutuar 4s ease-in-out infinite;
+  animation: flutuar 4s ease-in-out infinite, pulse-glow 2s infinite;
+  position: relative;
+}
+
+.hero__card-alerta::before {
+  content: '>_';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 0.7rem;
+  color: var(--green);
+  font-family: monospace;
+  opacity: 0.5;
 }
 
 @keyframes flutuar {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
@@ -89,37 +111,40 @@
   display: flex;
   align-items: center;
   gap: .75rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--green);
+  font-family: monospace;
 }
 
 .hero__card-nivel .icone {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .hero__card-item {
-  font-size: .9rem;
+  font-size: 0.8rem;
   opacity: .85;
-  margin-bottom: .4rem;
+  margin-bottom: 0.3rem;
   color: var(--gray);
+  font-family: monospace;
 }
 
 .hero__card-msg {
-  margin-top: 1rem;
-  padding: .75rem 1rem;
-  background: rgba(34, 197, 94, 0.1);
+  margin-top: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  background: rgba(0, 255, 136, 0.05);
   border-radius: var(--radius-sm);
-  font-size: .95rem;
+  font-size: 0.8rem;
   line-height: 1.5;
-  border-left: 3px solid var(--green);
+  border-left: 2px solid var(--green);
+  font-family: monospace;
 }
 
 .passos {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .passo {
@@ -129,37 +154,42 @@
 }
 
 .passo__num {
-  min-width: 52px;
-  height: 52px;
-  background: var(--green);
-  color: var(--white);
+  min-width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  color: var(--black);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   flex-shrink: 0;
+  font-family: monospace;
+  box-shadow: 0 0 10px var(--green);
 }
 
 .passo__titulo {
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1rem;
   margin-bottom: .3rem;
   color: var(--green);
+  font-family: monospace;
 }
 
 .passo__texto {
   color: var(--gray);
-  font-size: .95rem;
+  font-size: 0.85rem;
+  font-family: monospace;
 }
 
 .mapa-container {
-  background: var(--card);
+  background: rgba(15, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
-  min-height: 300px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,24 +200,25 @@
 
 .mapa-legenda {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 
 .mapa-legenda__item {
   display: flex;
   align-items: center;
   gap: .4rem;
-  font-size: .88rem;
+  font-size: 0.75rem;
   color: var(--gray);
+  font-family: monospace;
 }
 
 .mapa-legenda__cor {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
 }
 
 .ods-grid {
@@ -198,29 +229,32 @@
 }
 
 .ods-badge {
-  padding: .75rem 1.25rem;
+  padding: 0.6rem 1rem;
   border-radius: var(--radius-sm);
   text-align: center;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 0.8rem;
   color: var(--white);
+  font-family: monospace;
+  backdrop-filter: blur(5px);
 }
 
 .ods-badge--2 {
-  background: #D3A228;
+  background: linear-gradient(135deg, #8B6914, #D3A228);
 }
 
 .ods-badge--9 {
-  background: #F36D25;
+  background: linear-gradient(135deg, #B85C14, #F36D25);
 }
 
 .ods-badge--13 {
-  background: #3F7E44;
+  background: linear-gradient(135deg, #2D5A2E, #3F7E44);
 }
 
 .ods-badge__num {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: block;
+  font-weight: 800;
 }
 
 @media (max-width: 768px) {
