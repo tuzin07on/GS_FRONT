@@ -47,15 +47,39 @@ Projeto/
 
 ### Nome Completo
 
-RM: XXXXXXX
+NOME: Arthur Cordão
 
-Turma: XXXXX
+RM: 570313
 
-GitHub:
-Link
+Turma: 1TDSR — FIAP
 
-LinkedIn:
-Link
+
+---
+
+NOME: Jefferson Faria
+
+RM: 573038
+
+Turma: 1TDSR — FIAP
+
+
+---
+
+NOME: Guilherme Novaes
+
+RM: 570444
+
+Turma: 1TDSR — FIAP
+
+
+---
+
+NOME: Josué Menezes
+
+RM: 569220
+
+Turma: 1TDSR — FIAP
+
 
 ---
 
@@ -65,14 +89,16 @@ As imagens utilizadas encontram-se na pasta:
 
 assets/
 
+
+
 ---
 
 ## Repositório GitHub
 
-https://github.com/seuusuario/climaplantio
+https://github.com/tuzin07on/GS_FRONT/tree/Site-2.0
 
 ---
 
 ## Contato
 
-contato@climaplantio.com
+arthurcordao0@gmail.com

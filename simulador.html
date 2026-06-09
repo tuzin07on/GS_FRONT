@@ -1,139 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador de Alertas — ClimaPlantio</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/simulador.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Alertas — ClimaPlantio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/simulador.css">
 </head>
+
 <body>
 
-  <nav class="navbar">
-    <div class="container navbar__inner">
-      <a href="index.html" class="navbar__logo">🌱 Clima<span>Plantio</span></a>
-      <ul class="navbar__links">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="solucao.html">Como Funciona</a></li>
-        <li><a href="simulador.html" class="ativo">Simulador</a></li>
-        <li><a href="monitoramento.html">Monitoramento</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="integrantes.html">Equipe</a></li>
-      </ul>
-      <button class="navbar__hamburguer" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="navbar__mobile">
-      <a href="index.html">Início</a>
-      <a href="solucao.html">Como Funciona</a>
-      <a href="simulador.html">Simulador</a>
-      <a href="monitoramento.html">Monitoramento</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contato.html">Contato</a>
-      <a href="integrantes.html">Equipe</a>
+    <nav class="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">🌱 Clima<span>Plantio</span></a>
+            <ul class="navbar__links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="simulador.html" class="ativo">Simulador</a></li>
+                <li><a href="monitoramento.html">Monitoramento</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+            </ul>
+            <button class="navbar__hamburguer" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav class="navbar__mobile">
+            <a href="index.html">Início</a>
+            <a href="simulador.html">Simulador</a>
+            <a href="monitoramento.html">Monitoramento</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contato.html">Contato</a>
+            <a href="integrantes.html">Equipe</a>
+        </nav>
     </nav>
-  </nav>
 
-  <section style="padding:4rem 0 2rem;">
-    <div class="container" style="text-align:center;">
-      <span class="tag tag--verde" style="margin-bottom:1rem;display:inline-block;">🛰️ Dados simulados — NASA POWER / INPE</span>
-      <h1 class="titulo-secao" style="margin-bottom:1rem;">Simulador de Alertas de Plantio</h1>
-      <p class="subtitulo-secao" style="margin:0 auto;">
-        Informe sua cultura e CEP para calcular o nível do alerta da sua região com base em dados de satélite.
-      </p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-      <div class="simulador">
-        <div class="simulador__titulo">🌱 Calcular janela de plantio</div>
-        
-        <div class="form__grupo">
-          <label class="form__label" for="cultura-select">Cultura</label>
-          <select class="form__select" id="cultura-select">
-            <option value="">Selecione a cultura...</option>
-            <option value="Milho">🌽 Milho</option>
-            <option value="Soja">🫘 Soja</option>
-            <option value="Feijão">🫘 Feijão</option>
-            <option value="Arroz">🌾 Arroz</option>
-            <option value="Trigo">🌾 Trigo</option>
-          </select>
+    <section style="padding:4rem 0 2rem;">
+        <div class="container" style="text-align:center;">
+            <span class="tag tag--verde" style="margin-bottom:1rem;display:inline-block;">🛰️ Dados simulados — NASA
+                POWER / INPE</span>
+            <h1 class="titulo-secao" style="margin-bottom:1rem;">Simulador de Alertas de Plantio</h1>
+            <p class="subtitulo-secao" style="margin:0 auto;">
+                Informe sua cultura e CEP para calcular o nível do alerta da sua região com base em dados de satélite.
+            </p>
         </div>
-        
-        <div class="form__grupo">
-          <label class="form__label" for="cep-simulador">CEP</label>
-          <input class="form__input" type="text" id="cep-simulador" placeholder="Ex: 01310-100" maxlength="9">
-          <span class="form__erro" id="erro-cep-simulador">CEP inválido. Digite um CEP com 8 dígitos.</span>
-        </div>
-        
-        <button class="btn btn--primario" id="btn-simular" style="width:100%;margin-top:.5rem;">
-          🔍 Calcular alerta
-        </button>
-        
-        <div id="resultado-simulador" class="simulador__resultado" style="display:none;"></div>
-      </div>
+    </section>
 
-      <div style="max-width:700px;margin:0 auto;">
-        <h2 class="titulo-secao" style="text-align:center;margin-bottom:1rem;">Parâmetros ideais por cultura</h2>
-        <p style="text-align:center;color:var(--gray);margin-bottom:1.5rem;font-size:.95rem;">
-          O algoritmo compara os dados de satélite com esses valores para classificar o alerta.
-        </p>
-        <table class="tabela-culturas">
-          <thead>
-            <tr>
-              <th>Cultura</th>
-              <th>Umidade ideal (%)</th>
-              <th>Temperatura ideal (°C)</th>
-              <th>Chuva mínima (mm)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>🌽 Milho</td><td>50 – 80%</td><td>18 – 32°C</td><td>15mm</td></tr>
-            <tr><td>🫘 Soja</td><td>55 – 85%</td><td>20 – 30°C</td><td>15mm</td></tr>
-            <tr><td>🫘 Feijão</td><td>45 – 75%</td><td>16 – 28°C</td><td>15mm</td></tr>
-            <tr><td>🌾 Arroz</td><td>70 – 95%</td><td>22 – 35°C</td><td>15mm</td></tr>
-            <tr><td>🌾 Trigo</td><td>40 – 70%</td><td>10 – 24°C</td><td>15mm</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="simulador">
+                <div class="simulador__titulo">🌱 Calcular janela de plantio</div>
 
-  <section class="section section--cinza">
-    <div class="container">
-      <h2 class="titulo-secao" style="text-align:center;">O que significa cada nível?</h2>
-      <div class="grid-3" style="margin-top:2rem;">
-        <div class="card" style="border-top:4px solid var(--green);">
-          <div class="card__icone">✅</div>
-          <div class="card__titulo">FAVORÁVEL</div>
-          <p class="card__texto">Todos os critérios estão dentro do ideal. Plante nos próximos 7 dias.</p>
-        </div>
-        <div class="card" style="border-top:4px solid var(--yellow);">
-          <div class="card__icone">⚠️</div>
-          <div class="card__titulo">ATENÇÃO</div>
-          <p class="card__texto">Dois dos três critérios estão adequados. Monitore e plante em até 3 dias.</p>
-        </div>
-        <div class="card" style="border-top:4px solid var(--red);">
-          <div class="card__icone">🚨</div>
-          <div class="card__titulo">CRÍTICO</div>
-          <p class="card__texto">Condições desfavoráveis. Aguarde melhora climática antes de plantar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="form__grupo">
+                    <label class="form__label" for="cultura-select">Cultura</label>
+                    <select class="form__select" id="cultura-select">
+                        <option value="">Selecione a cultura...</option>
+                        <option value="Milho">🌽 Milho</option>
+                        <option value="Soja">🫘 Soja</option>
+                        <option value="Feijão">🫘 Feijão</option>
+                        <option value="Arroz">🌾 Arroz</option>
+                        <option value="Trigo">🌾 Trigo</option>
+                    </select>
+                </div>
 
-  <footer class="footer">
-    <div class="container">
-      <p><strong>ClimaPlantio</strong> — Grupo Dome | Turma 1TDSR | FIAP Global Solution 2026/1</p>
-    </div>
-  </footer>
+                <div class="form__grupo">
+                    <label class="form__label" for="cep-simulador">CEP</label>
+                    <input class="form__input" type="text" id="cep-simulador" placeholder="Ex: 01310-100" maxlength="9">
+                    <span class="form__erro" id="erro-cep-simulador">CEP inválido. Digite um CEP com 8 dígitos.</span>
+                </div>
 
-  <script src="js/global.js"></script>
-  <script src="js/simulador.js"></script>
+                <button class="btn btn--primario" id="btn-simular" style="width:100%;margin-top:.5rem;">
+                    🔍 Calcular alerta
+                </button>
+
+                <div id="resultado-simulador" class="simulador__resultado" style="display:none;"></div>
+            </div>
+
+            <div style="max-width:700px;margin:0 auto;">
+                <h2 class="titulo-secao" style="text-align:center;margin-bottom:1rem;">Parâmetros ideais por cultura
+                </h2>
+                <p style="text-align:center;color:var(--gray);margin-bottom:1.5rem;font-size:.95rem;">
+                    O algoritmo compara os dados de satélite com esses valores para classificar o alerta.
+                </p>
+                <table class="tabela-culturas">
+                    <thead>
+                        <tr>
+                            <th>Cultura</th>
+                            <th>Umidade ideal (%)</th>
+                            <th>Temperatura ideal (°C)</th>
+                            <th>Chuva mínima (mm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🌽 Milho</td>
+                            <td>50 – 80%</td>
+                            <td>18 – 32°C</td>
+                            <td>15mm</td>
+                        </tr>
+                        <tr>
+                            <td>🫘 Soja</td>
+                            <td>55 – 85%</td>
+                            <td>20 – 30°C</td>
+                            <td>15mm</td>
+                        </tr>
+                        <tr>
+                            <td>🫘 Feijão</td>
+                            <td>45 – 75%</td>
+                            <td>16 – 28°C</td>
+                            <td>15mm</td>
+                        </tr>
+                        <tr>
+                            <td>🌾 Arroz</td>
+                            <td>70 – 95%</td>
+                            <td>22 – 35°C</td>
+                            <td>15mm</td>
+                        </tr>
+                        <tr>
+                            <td>🌾 Trigo</td>
+                            <td>40 – 70%</td>
+                            <td>10 – 24°C</td>
+                            <td>15mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--cinza">
+        <div class="container">
+            <h2 class="titulo-secao" style="text-align:center;">O que significa cada nível?</h2>
+            <div class="grid-3" style="margin-top:2rem;">
+                <div class="card" style="border-top:4px solid var(--green);">
+                    <div class="card__icone">✅</div>
+                    <div class="card__titulo">FAVORÁVEL</div>
+                    <p class="card__texto">Todos os critérios estão dentro do ideal. Plante nos próximos 7 dias.</p>
+                </div>
+                <div class="card" style="border-top:4px solid var(--yellow);">
+                    <div class="card__icone">⚠️</div>
+                    <div class="card__titulo">ATENÇÃO</div>
+                    <p class="card__texto">Dois dos três critérios estão adequados. Monitore e plante em até 3 dias.</p>
+                </div>
+                <div class="card" style="border-top:4px solid var(--red);">
+                    <div class="card__icone">🚨</div>
+                    <div class="card__titulo">CRÍTICO</div>
+                    <p class="card__texto">Condições desfavoráveis. Aguarde melhora climática antes de plantar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ClimaPlantio</strong> — Grupo Dome | Turma 1TDSR | FIAP Global Solution 2026/1</p>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/simulador.js"></script>
 </body>
+
 </html>
