@@ -4,143 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClimaPlantio</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>ClimaPlantio — Alertas de Plantio via Satélite</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h2>🌱 ClimaPlantio</h2>
-            </div>
-
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="simulador.html">Simulador</a></li>
-                    <li><a href="monitoramento.html">Monitoramento</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="integrantes.html">Equipe</a></li>
-                </ul>
-            </nav>
-
-            <button id="menu-btn">
-                ☰
+    <nav class="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">🌱 Clima<span>Plantio</span></a>
+            <ul class="navbar__links">
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="monitoramento.html">Monitoramento</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+            </ul>
+            <button class="navbar__hamburguer" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
-    </header>
+        <nav class="navbar__mobile">
+            <a href="index.html">Início</a>
+            <a href="simulador.html">Simulador</a>
+            <a href="monitoramento.html">Monitoramento</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contato.html">Contato</a>
+            <a href="integrantes.html">Equipe</a>
+        </nav>
+    </nav>
 
-    <main>
-
-        <section class="hero">
-            <div class="hero-content">
-
-                <h1>Inteligência Climática para o Campo</h1>
-
-                <p>
-                    Utilizando dados de satélites da NASA e INPE para indicar
-                    o melhor momento para plantar e aumentar a produtividade.
+    <section class="hero">
+        <div class="container hero__inner">
+            <div>
+                <div class="hero__tag">
+                    <span class="tag tag--verde">🛰️ Dados de Satélite NASA &amp; INPE</span>
+                </div>
+                <h1 class="hero__titulo">
+                    Saiba o momento <em>certo de plantar</em>, guiado pelo espaço.
+                </h1>
+                <p class="hero__desc">
+                    O ClimaPlantio usa dados reais de satélites para calcular a janela ideal de plantio
+                    por cultura e região — e entrega a decisão em linguagem simples.
                 </p>
-
-                <div class="hero-buttons">
-                    <a href="simulador.html" class="btn">Simular Plantio</a>
-                    <a href="sobre.html" class="btn-outline">Conheça a Solução</a>
+                <div class="hero__acoes">
+                    <a href="simulador.html" class="btn btn--primario">Consultar minha região</a>
+                    <a href="sobre.html" class="btn btn--outline">Ver como funciona</a>
                 </div>
-
             </div>
-        </section>
-
-        <section class="stats">
-
-            <h2>Números do Problema</h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>R$40 Bi</h3>
-                    <p>Perdidos anualmente devido a eventos climáticos.</p>
+            <div class="hero__visual">
+                <div class="hero__card-alerta">
+                    <div class="hero__card-nivel">
+                        <span class="icone">✅</span> FAVORÁVEL
+                    </div>
+                    <div class="hero__card-item">🌱 Cultura: Milho</div>
+                    <div class="hero__card-item">📍 Região: São Paulo — SP</div>
+                    <div class="hero__card-item">💧 Umidade: 62% ✔</div>
+                    <div class="hero__card-item">🌧️ Chuva: 45mm ✔</div>
+                    <div class="hero__card-item">🌡️ Temp: 24°C ✔</div>
+                    <div class="hero__card-msg">
+                        📋 Plante nos próximos <strong>7 dias</strong>. Condições ideais identificadas.
+                    </div>
                 </div>
-
-                <div class="card">
-                    <h3>70%</h3>
-                    <p>Dos pequenos produtores não possuem suporte técnico.</p>
-                </div>
-
-                <div class="card">
-                    <h3>3,8 Milhões</h3>
-                    <p>De propriedades podem ser beneficiadas.</p>
-                </div>
-
             </div>
+        </div>
+    </section>
 
-        </section>
-
-        <section class="solution">
-
-            <h2>Como Funciona?</h2>
-
-            <div class="flow">
-
-                <div class="flow-card">Produtor</div>
-                <div class="arrow">→</div>
-
-                <div class="flow-card">Telegram</div>
-                <div class="arrow">→</div>
-
-                <div class="flow-card">NASA / INPE</div>
-                <div class="arrow">→</div>
-
-                <div class="flow-card">Algoritmo</div>
-                <div class="arrow">→</div>
-
-                <div class="flow-card">Recomendação</div>
-
+    <section class="section section--cinza">
+        <div class="container" style="text-align:center;">
+            <h2 class="titulo-secao">O problema que estamos resolvendo</h2>
+            <p class="subtitulo-secao" style="margin:0 auto 3rem;">O agronegócio brasileiro perde bilhões por ano por
+                falta de informação no momento certo.</p>
+            <div class="grid-3">
+                <div class="card" style="text-align:center;">
+                    <div class="card__icone">💸</div>
+                    <div style="font-size:2.4rem;font-weight:800;color:var(--vermelho);">
+                        R$ <span class="counter" data-target="40">0</span>bi
+                    </div>
+                    <div class="card__titulo">perdidos por ano</div>
+                    <p class="card__texto">em safras devido a fenômenos climáticos adversos no Brasil</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="card__icone">🏡</div>
+                    <div style="font-size:2.4rem;font-weight:800;color:var(--amarelo);">
+                        <span class="counter" data-target="70">0</span>%
+                    </div>
+                    <div class="card__titulo">sem orientação técnica</div>
+                    <p class="card__texto">das pequenas propriedades rurais não têm acesso a dados de plantio</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="card__icone">👨‍🌾</div>
+                    <div style="font-size:2.4rem;font-weight:800;color:var(--verde-claro);">
+                        <span class="counter" data-target="3800">0</span>k
+                    </div>
+                    <div class="card__titulo">propriedades beneficiadas</div>
+                    <p class="card__texto">de pequeno porte que podem se beneficiar do ClimaPlantio</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-        </section>
-
-        <section class="benefits">
-
-            <h2>Benefícios</h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>🚜 Fácil Uso</h3>
-                    <p>Sem aplicativos complexos.</p>
+    <section class="section">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:4rem;">
+                <div>
+                    <h2 class="titulo-secao">Como funciona em 3 passos</h2>
+                    <p class="subtitulo-secao">Sem app para instalar. Sem dashboard complicado. Só a decisão que você
+                        precisa.</p>
+                    <div class="passos">
+                        <div class="passo">
+                            <div class="passo__num">1</div>
+                            <div>
+                                <div class="passo__titulo">Você informa cultura e CEP</div>
+                                <p class="passo__texto">O sistema aceita milho, soja, feijão, arroz e trigo.</p>
+                            </div>
+                        </div>
+                        <div class="passo">
+                            <div class="passo__num">2</div>
+                            <div>
+                                <div class="passo__titulo">Satélites coletam os dados</div>
+                                <p class="passo__texto">A plataforma acessa umidade do solo e precipitação via NASA
+                                    POWER e INPE.</p>
+                            </div>
+                        </div>
+                        <div class="passo">
+                            <div class="passo__num">3</div>
+                            <div>
+                                <div class="passo__titulo">Você recebe a decisão</div>
+                                <p class="passo__texto">FAVORÁVEL, ATENÇÃO ou CRÍTICO — com a recomendação clara.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:2rem;">
+                        <a href="sobre.html" class="btn btn--primario">Entender mais a fundo</a>
+                    </div>
                 </div>
-
-                <div class="card">
-                    <h3>🛰 Dados Reais</h3>
-                    <p>Informações obtidas por satélites.</p>
+                <div>
+                    <div class="mapa-container">
+                        <div style="font-size:3rem;">🗺️</div>
+                        <p style="font-weight:600;color:var(--verde-escuro);">Mapa de alertas por região</p>
+                        <p style="font-size:.9rem;color:var(--cinza-medio);max-width:280px;">
+                            O ClimaPlantio cobre todas as regiões do Brasil com dados de satélite atualizados.
+                        </p>
+                        <a href="simulador.html" class="btn btn--primario" style="margin-top:.5rem;">Consultar minha
+                            região →</a>
+                        <div class="mapa-legenda">
+                            <div class="mapa-legenda__item">
+                                <div class="mapa-legenda__cor" style="background:var(--verde-claro);"></div> Favorável
+                            </div>
+                            <div class="mapa-legenda__item">
+                                <div class="mapa-legenda__cor" style="background:var(--amarelo);"></div> Atenção
+                            </div>
+                            <div class="mapa-legenda__item">
+                                <div class="mapa-legenda__cor" style="background:var(--vermelho);"></div> Crítico
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="card">
-                    <h3>🌧 Prevenção</h3>
-                    <p>Redução dos riscos climáticos.</p>
-                </div>
-
             </div>
+        </div>
+    </section>
 
-        </section>
+    <section class="section section--verde">
+        <div class="container" style="text-align:center;">
+            <h2 class="titulo-secao titulo-secao--branco">Conectado aos Objetivos de Desenvolvimento Sustentável</h2>
+            <p style="color:var(--verde-mint);margin-bottom:2.5rem;">O ClimaPlantio contribui diretamente para 3 ODS da
+                ONU.</p>
+            <div class="ods-grid">
+                <div class="ods-badge ods-badge--2">
+                    <span class="ods-badge__num">2</span>
+                    Fome Zero
+                </div>
+                <div class="ods-badge ods-badge--9">
+                    <span class="ods-badge__num">9</span>
+                    Inovação
+                </div>
+                <div class="ods-badge ods-badge--13">
+                    <span class="ods-badge__num">13</span>
+                    Ação Climática
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <section class="section" style="text-align:center;">
+        <div class="container">
+            <h2 class="titulo-secao">Pronto para planejar sua próxima safra?</h2>
+            <p class="subtitulo-secao" style="margin:0 auto 2rem;">Use o simulador e veja qual o nível de alerta para
+                sua cultura e região agora.</p>
+            <a href="simulador.html" class="btn btn--primario" style="font-size:1.1rem;padding:1rem 2.5rem;">
+                Acessar simulador de alertas →
+            </a>
+        </div>
+    </section>
 
-    <footer>
-
-        <p>
-            © 2026 ClimaPlantio - Todos os direitos reservados.
-        </p>
-
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ClimaPlantio</strong> — Grupo Dome | Turma 1TDSR | FIAP Global Solution 2026/1</p>
+            <p style="margin-top:.5rem;">ODS 2 · ODS 9 · ODS 13</p>
+        </div>
     </footer>
 
-    <script src="js/script.js"></script>
-
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

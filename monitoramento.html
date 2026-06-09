@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento — ClimaPlantio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/monitoramento.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">🌱 Clima<span>Plantio</span></a>
+            <ul class="navbar__links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="monitoramento.html" class="ativo">Monitoramento</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+            </ul>
+            <button class="navbar__hamburguer" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav class="navbar__mobile">
+            <a href="index.html">Início</a>
+            <a href="simulador.html">Simulador</a>
+            <a href="monitoramento.html">Monitoramento</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contato.html">Contato</a>
+            <a href="integrantes.html">Equipe</a>
+        </nav>
+    </nav>
+
+    <section class="hero" style="padding:4rem 0 3rem;">
+        <div class="container" style="text-align:center;">
+            <span class="tag tag--verde" style="margin-bottom:1rem;display:inline-block;">📡 Monitoramento em Tempo
+                Real</span>
+            <h1 class="hero__titulo" style="max-width:640px;margin:0 auto 1rem;">Dados climáticos <br>em tempo real</h1>
+            <p class="hero__desc" style="max-width:560px;margin:0 auto;">
+                Visualize condições do solo e clima simuladas com base em dados de satélite e algoritmos de previsão
+                agrícola.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="dashboard-grid">
+                <div class="card monitor-card">
+                    <div class="monitor-card__icone">🌡️</div>
+                    <div class="monitor-card__label">Temperatura</div>
+                    <div class="monitor-card__valor"><span id="temp">--</span> °C</div>
+                </div>
+                <div class="card monitor-card">
+                    <div class="monitor-card__icone">💧</div>
+                    <div class="monitor-card__label">Umidade do Solo</div>
+                    <div class="monitor-card__valor"><span id="umidade">--</span> %</div>
+                </div>
+                <div class="card monitor-card">
+                    <div class="monitor-card__icone">🌧️</div>
+                    <div class="monitor-card__label">Precipitação</div>
+                    <div class="monitor-card__valor"><span id="chuva">--</span> mm</div>
+                </div>
+                <div class="card monitor-card status-card">
+                    <div class="monitor-card__icone">📊</div>
+                    <div class="monitor-card__label">Status Geral</div>
+                    <div class="monitor-card__valor" id="status">--</div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <button onclick="gerarDados()" class="btn btn--primario">🔄 Atualizar Dados</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--cinza">
+        <div class="container" style="text-align:center;">
+            <h2 class="titulo-secao">Fonte dos dados</h2>
+            <p class="subtitulo-secao" style="margin:0 auto;">
+                Os dados são simulados com base em padrões reais coletados pelos satélites da NASA e INPE.
+            </p>
+            <div class="grid-2" style="max-width:600px;margin:2rem auto 0;">
+                <div class="card">
+                    <div class="card__icone">🚀</div>
+                    <div class="card__titulo">NASA POWER</div>
+                    <p class="card__texto">Dados meteorológicos e de superfície</p>
+                </div>
+                <div class="card">
+                    <div class="card__icone">🇧🇷</div>
+                    <div class="card__titulo">INPE</div>
+                    <p class="card__texto">Monitoramento de secas e umidade do solo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ClimaPlantio</strong> — Grupo Dome | Turma 1TDSR | FIAP Global Solution 2026/1</p>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/monitoramento.js"></script>
+</body>
+
+</html>
