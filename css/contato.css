@@ -15,40 +15,41 @@
 .form__label {
   font-weight: 600;
   font-size: .9rem;
-  color: var(--verde-escuro);
+  color: var(--green);
 }
 
 .form__input,
 .form__textarea,
 .form__select {
   padding: .75rem 1rem;
-  border: 2px solid #ddd;
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 1rem;
   font-family: inherit;
   transition: border-color var(--transicao), box-shadow var(--transicao);
   outline: none;
   width: 100%;
-  background: var(--branco);
+  background: var(--card);
+  color: var(--white);
 }
 
 .form__input:focus,
 .form__textarea:focus,
 .form__select:focus {
-  border-color: var(--verde-claro);
-  box-shadow: 0 0 0 3px rgba(82, 183, 136, .2);
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, .2);
 }
 
 .form__input.valido {
-  border-color: var(--verde-claro);
+  border-color: var(--green);
 }
 
 .form__input.invalido {
-  border-color: var(--vermelho);
+  border-color: var(--red);
 }
 
 .form__erro {
-  color: var(--vermelho);
+  color: var(--red);
   font-size: .83rem;
   display: none;
 }
@@ -59,14 +60,15 @@
 
 .form__sucesso {
   display: none;
-  background: var(--verde-suave);
-  color: var(--verde-escuro);
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--green);
   padding: 1rem 1.25rem;
   border-radius: var(--radius-sm);
   font-weight: 600;
   text-align: center;
   max-width: 600px;
   margin: 2rem auto 0;
+  border: 1px solid var(--green);
 }
 
 .form__sucesso.visivel {
@@ -77,13 +79,13 @@
   max-width: 600px;
   margin: 3rem auto 0;
   padding-top: 2rem;
-  border-top: 2px solid var(--verde-mint);
+  border-top: 2px solid var(--border);
 }
 
 .contato-info__titulo {
   font-family: var(--fonte-titulo);
   font-size: 1.3rem;
-  color: var(--verde-escuro);
+  color: var(--green);
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -99,13 +101,15 @@
   align-items: center;
   gap: 1rem;
   padding: 0.75rem;
-  background: var(--cinza-claro);
+  background: var(--card);
   border-radius: var(--radius-sm);
   transition: transform var(--transicao);
+  border: 1px solid var(--border);
 }
 
 .contato-info__item:hover {
   transform: translateX(5px);
+  border-color: var(--green);
 }
 
 .contato-info__icone {
@@ -114,12 +118,12 @@
 
 .contato-info__label {
   font-size: 0.8rem;
-  color: var(--cinza-medio);
+  color: var(--gray);
 }
 
 .contato-info__valor {
   font-weight: 600;
-  color: var(--verde-escuro);
+  color: var(--white);
 }
 
 @media (max-width: 480px) {

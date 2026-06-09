@@ -7,9 +7,10 @@
 }
 
 .faq-item {
-  border: 1px solid var(--verde-mint);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   overflow: hidden;
+  background: var(--card);
 }
 
 .faq-item__pergunta {
@@ -20,7 +21,7 @@
   padding: 1.1rem 1.25rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--verde-escuro);
+  color: var(--white);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -29,12 +30,14 @@
 }
 
 .faq-item__pergunta:hover {
-  background: var(--verde-suave);
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--green);
 }
 
 .faq-item__seta {
   font-size: 1.2rem;
   transition: transform var(--transicao);
+  color: var(--green);
 }
 
 .faq-item.aberto .faq-item__seta {
@@ -44,7 +47,7 @@
 .faq-item__resposta {
   display: none;
   padding: 0 1.25rem 1.25rem;
-  color: var(--cinza-medio);
+  color: var(--gray);
   line-height: 1.7;
   font-size: .97rem;
 }

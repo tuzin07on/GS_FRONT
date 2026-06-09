@@ -1,9 +1,10 @@
 .hero {
-  background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-medio) 60%, var(--verde-claro) 100%);
-  color: var(--branco);
+  background: linear-gradient(135deg, var(--black) 0%, var(--dark) 60%, #0a1a0f 100%);
+  color: var(--white);
   padding: 6rem 0 5rem;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--border);
 }
 
 .hero::before {
@@ -14,7 +15,7 @@
   width: 340px;
   height: 340px;
   border-radius: 50%;
-  background: rgba(82, 183, 136, .15);
+  background: rgba(34, 197, 94, 0.08);
 }
 
 .hero__inner {
@@ -33,10 +34,11 @@
   font-size: 2.6rem;
   line-height: 1.2;
   margin-bottom: 1.25rem;
+  font-weight: 800;
 }
 
 .hero__titulo em {
-  color: var(--verde-claro);
+  color: var(--green);
   font-style: normal;
 }
 
@@ -45,6 +47,7 @@
   opacity: .88;
   margin-bottom: 2rem;
   line-height: 1.7;
+  color: var(--gray);
 }
 
 .hero__acoes {
@@ -60,9 +63,9 @@
 }
 
 .hero__card-alerta {
-  background: rgba(255, 255, 255, .12);
+  background: rgba(17, 24, 39, 0.8);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, .25);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 2rem;
   width: 100%;
@@ -89,6 +92,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: var(--green);
 }
 
 .hero__card-nivel .icone {
@@ -99,15 +103,17 @@
   font-size: .9rem;
   opacity: .85;
   margin-bottom: .4rem;
+  color: var(--gray);
 }
 
 .hero__card-msg {
   margin-top: 1rem;
   padding: .75rem 1rem;
-  background: rgba(255, 255, 255, .15);
+  background: rgba(34, 197, 94, 0.1);
   border-radius: var(--radius-sm);
   font-size: .95rem;
   line-height: 1.5;
+  border-left: 3px solid var(--green);
 }
 
 .passos {
@@ -125,8 +131,8 @@
 .passo__num {
   min-width: 52px;
   height: 52px;
-  background: var(--verde-claro);
-  color: var(--branco);
+  background: var(--green);
+  color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -140,16 +146,16 @@
   font-weight: 700;
   font-size: 1.05rem;
   margin-bottom: .3rem;
-  color: var(--verde-escuro);
+  color: var(--green);
 }
 
 .passo__texto {
-  color: var(--cinza-medio);
+  color: var(--gray);
   font-size: .95rem;
 }
 
 .mapa-container {
-  background: var(--cinza-claro);
+  background: var(--card);
   border-radius: var(--radius);
   padding: 2rem;
   text-align: center;
@@ -159,6 +165,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  border: 1px solid var(--border);
 }
 
 .mapa-legenda {
@@ -174,6 +181,7 @@
   align-items: center;
   gap: .4rem;
   font-size: .88rem;
+  color: var(--gray);
 }
 
 .mapa-legenda__cor {
@@ -195,7 +203,7 @@
   text-align: center;
   font-weight: 700;
   font-size: .9rem;
-  color: var(--branco);
+  color: var(--white);
 }
 
 .ods-badge--2 {
