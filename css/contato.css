@@ -1,0 +1,28 @@
+.contato-hero{
+    padding-top:180px;
+    text-align:center;
+}
+
+.contato-hero h1{
+    font-size:4rem;
+}
+
+.form-box{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input,textarea{
+    padding:15px;
+    border-radius:10px;
+    border:none;
+    background:#111;
+    color:white;
+}
+
+textarea{
+    min-height:120px;
+}

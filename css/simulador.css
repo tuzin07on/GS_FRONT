@@ -1,0 +1,82 @@
+.sim-hero{
+    padding-top:180px;
+    padding-bottom:80px;
+    text-align:center;
+}
+
+.sim-hero .tag{
+    color:var(--green);
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.sim-hero h1{
+    font-size:4.5rem;
+    margin:30px 0;
+    line-height:1;
+}
+
+.sim-hero p{
+    color:#cbd5e1;
+    max-width:600px;
+    margin:auto;
+}
+
+.sim-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.form-box input,
+.form-box select{
+    width:100%;
+    padding:14px;
+    margin:10px 0 20px;
+    border-radius:10px;
+    border:none;
+    background:#111;
+    color:white;
+}
+
+.result-box{
+    min-height:350px;
+}
+
+.placeholder{
+    color:#94a3b8;
+}
+
+/* RESULTADOS */
+.result-card{
+    padding:20px;
+    border-radius:15px;
+    margin-top:15px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.status-good{
+    color:#22c55e;
+    font-weight:800;
+}
+
+.status-mid{
+    color:#facc15;
+    font-weight:800;
+}
+
+.status-bad{
+    color:#ef4444;
+    font-weight:800;
+}
+
+@media(max-width:900px){
+    .sim-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sim-hero h1{
+        font-size:2.5rem;
+    }
+}

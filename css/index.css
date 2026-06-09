@@ -1,0 +1,159 @@
+header{
+    position:fixed;
+    width:100%;
+    z-index:1000;
+    background:rgba(0,0,0,.5);
+    backdrop-filter:blur(15px);
+}
+
+.navbar{
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:var(--green);
+    font-size:28px;
+    font-weight:800;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),
+    url('../assets/images/agro-bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-tag{
+    color:var(--green);
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:7rem;
+    line-height:90%;
+    margin:20px 0;
+}
+
+.hero p{
+    max-width:700px;
+    color:#ddd;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+}
+
+.btn-outline{
+    border:2px solid var(--green);
+    color:var(--green);
+    padding:16px 35px;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.numbers .container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.number-card{
+    text-align:center;
+}
+
+.number-card h2{
+    font-size:6rem;
+    color:var(--green);
+}
+
+.problem .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.problem h2{
+    font-size:5rem;
+    line-height:100%;
+}
+
+.problem p{
+    font-size:1.2rem;
+    line-height:2;
+}
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.step{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    padding:40px;
+    border-radius:20px;
+}
+
+.step span{
+    font-size:3rem;
+    color:var(--green);
+}
+
+.partner-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.partner{
+    text-align:center;
+    padding:40px;
+    background:#111;
+    border-radius:15px;
+}
+
+.cta{
+    text-align:center;
+}
+
+.cta h2{
+    font-size:4rem;
+    margin-bottom:40px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid rgba(255,255,255,.1);
+}

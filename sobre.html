@@ -2,136 +2,206 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - ClimaPlantio</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sobre - ClimaPlantio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/sobre.css">
+
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
+<!-- HEADER PREMIUM -->
+<header id="header">
 
-            <div class="logo">
-                <h2>🌱 ClimaPlantio</h2>
-            </div>
+    <div class="container navbar">
 
-            <nav id="menu">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="simulador.html">Simulador</a></li>
-                    <li><a href="monitoramento.html">Monitoramento</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="integrantes.html">Equipe</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            🌱 ClimaPlantio
+        </div>
 
-            <button id="menu-btn">☰</button>
+        <nav>
+            <ul class="menu">
+
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="monitoramento.html">Monitoramento</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- HERO SOBRE -->
+<section class="sobre-hero">
+
+    <div class="container">
+
+        <span class="tag">Sobre o Projeto</span>
+
+        <h1>
+            Transformando dados<br>
+            em decisões agrícolas.
+        </h1>
+
+        <p>
+            O ClimaPlantio nasceu para resolver um problema real:
+            o pequeno produtor toma decisões sem dados confiáveis de clima.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PROBLEMA X SOLUÇÃO -->
+<section class="split">
+
+    <div class="container split-grid">
+
+        <div class="card reveal">
+
+            <h2>O Problema</h2>
+
+            <p>
+                Pequenos produtores rurais dependem de experiência própria
+                ou calendários genéricos, o que gera perdas financeiras
+                significativas devido a condições climáticas imprevisíveis.
+            </p>
 
         </div>
-    </header>
 
-    <main>
+        <div class="card reveal">
 
-        <section class="stats">
+            <h2>Nossa Solução</h2>
 
-            <h1>Sobre o Projeto</h1>
+            <p>
+                Utilizamos dados de satélites da NASA e INPE para gerar
+                recomendações automáticas de plantio com base em clima,
+                solo e previsão de chuva.
+            </p>
 
-            <div class="cards">
+        </div>
 
-                <div class="card">
-                    <h3>Problema</h3>
+    </div>
 
-                    <p>
-                        Pequenos produtores rurais frequentemente realizam o
-                        plantio sem acesso a informações climáticas confiáveis,
-                        aumentando os riscos de perdas na produção.
-                    </p>
-                </div>
+</section>
 
-                <div class="card">
-                    <h3>Solução</h3>
+<!-- MISSÃO VISÃO VALORES -->
+<section>
 
-                    <p>
-                        O ClimaPlantio utiliza dados climáticos obtidos por
-                        satélites para indicar a melhor janela de plantio
-                        para cada cultura agrícola.
-                    </p>
-                </div>
+    <div class="container">
 
-                <div class="card">
-                    <h3>Objetivo</h3>
+        <h2 class="section-title">Missão, Visão e Valores</h2>
 
-                    <p>
-                        Democratizar o acesso à tecnologia espacial para
-                        pequenos e médios produtores rurais brasileiros.
-                    </p>
-                </div>
+        <div class="mvv-grid">
 
+            <div class="card reveal">
+                <h3>🎯 Missão</h3>
+                <p>
+                    Democratizar o acesso à inteligência climática no agronegócio.
+                </p>
             </div>
 
-        </section>
-
-        <section class="solution">
-
-            <h2>Como Funciona</h2>
-
-            <div class="flow">
-
-                <div class="flow-card">Produtor informa CEP</div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-card">Dados NASA e INPE</div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-card">Análise Climática</div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-card">Recomendação</div>
-
+            <div class="card reveal">
+                <h3>🚀 Visão</h3>
+                <p>
+                    Ser referência em tecnologia agrícola acessível no Brasil.
+                </p>
             </div>
 
-        </section>
-
-        <section class="benefits">
-
-            <h2>Tecnologias Utilizadas</h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>HTML5</h3>
-                    <p>Estrutura semântica e acessível.</p>
-                </div>
-
-                <div class="card">
-                    <h3>CSS3</h3>
-                    <p>Responsividade e identidade visual moderna.</p>
-                </div>
-
-                <div class="card">
-                    <h3>JavaScript</h3>
-                    <p>Interatividade e funcionalidades dinâmicas.</p>
-                </div>
-
+            <div class="card reveal">
+                <h3>🌱 Valores</h3>
+                <p>
+                    Inovação, simplicidade, impacto social e sustentabilidade.
+                </p>
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
 
-    <footer>
-        <p>© 2026 ClimaPlantio</p>
-    </footer>
+</section>
 
-    <script src="js/script.js"></script>
+<!-- TIMELINE -->
+<section class="timeline-section">
+
+    <div class="container">
+
+        <h2 class="section-title">Como o sistema funciona</h2>
+
+        <div class="timeline">
+
+            <div class="step reveal">
+                <span>01</span>
+                <h3>Entrada de dados</h3>
+                <p>Produtor informa cultura e CEP.</p>
+            </div>
+
+            <div class="step reveal">
+                <span>02</span>
+                <h3>Coleta de dados</h3>
+                <p>NASA POWER e INPE fornecem dados climáticos.</p>
+            </div>
+
+            <div class="step reveal">
+                <span>03</span>
+                <h3>Análise</h3>
+                <p>Algoritmo avalia umidade, chuva e risco climático.</p>
+            </div>
+
+            <div class="step reveal">
+                <span>04</span>
+                <h3>Decisão</h3>
+                <p>Retorno simples: plantar ou aguardar.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TECNOLOGIAS -->
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">Tecnologias Utilizadas</h2>
+
+        <div class="tech-grid">
+
+            <div class="card reveal">HTML5</div>
+            <div class="card reveal">CSS3</div>
+            <div class="card reveal">JavaScript</div>
+            <div class="card reveal">NASA POWER API</div>
+            <div class="card reveal">INPE</div>
+            <div class="card reveal">Telegram Bot</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 ClimaPlantio</p>
+
+</footer>
+
+<script src="js/global.js"></script>
 
 </body>
 

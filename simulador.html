@@ -2,24 +2,31 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador - ClimaPlantio</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Simulador - ClimaPlantio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/simulador.css">
+
 </head>
 
 <body>
 
-<header>
-    <div class="container">
+<!-- HEADER PADRÃO -->
+<header id="header">
 
-        <div class="logo">
-            <h2>🌱 ClimaPlantio</h2>
-        </div>
+    <div class="container navbar">
 
-        <nav id="menu">
-            <ul>
+        <div class="logo">🌱 ClimaPlantio</div>
+
+        <nav>
+            <ul class="menu">
+
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="simulador.html">Simulador</a></li>
@@ -27,60 +34,88 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="integrantes.html">Equipe</a></li>
+
             </ul>
         </nav>
 
-        <button id="menu-btn">☰</button>
-
     </div>
+
 </header>
 
-<main>
+<!-- HERO -->
+<section class="sim-hero">
 
-<section class="stats">
+    <div class="container">
 
-    <h1>Simulador de Plantio</h1>
+        <span class="tag">Simulação Inteligente</span>
 
-    <div class="simulador-container">
+        <h1>
+            Analise o clima<br>
+            em segundos.
+        </h1>
 
-        <label>Cultura:</label>
-
-        <select id="cultura">
-
-            <option value="">Selecione</option>
-
-            <option>Milho</option>
-            <option>Soja</option>
-            <option>Feijão</option>
-
-        </select>
-
-        <label>CEP:</label>
-
-        <input
-            type="text"
-            id="cep"
-            placeholder="Digite o CEP">
-
-        <button class="btn" onclick="simularPlantio()">
-            Analisar Condições
-        </button>
-
-    </div>
-
-    <div id="resultado" class="resultado">
+        <p>
+            Simule condições climáticas e receba uma recomendação
+            baseada em dados de satélite.
+        </p>
 
     </div>
 
 </section>
 
-</main>
+<!-- SIMULADOR -->
+<section class="sim-box">
+
+    <div class="container sim-grid">
+
+        <!-- INPUTS -->
+        <div class="card form-box reveal">
+
+            <h2>Nova Análise</h2>
+
+            <label>Cultura</label>
+            <select id="cultura">
+                <option>Milho</option>
+                <option>Soja</option>
+                <option>Feijão</option>
+            </select>
+
+            <label>CEP</label>
+            <input type="text" id="cep" placeholder="Digite seu CEP">
+
+            <button onclick="simular()" class="btn">
+                Analisar Clima
+            </button>
+
+        </div>
+
+        <!-- RESULTADO -->
+        <div class="card result-box reveal">
+
+            <h2>Resultado da Análise</h2>
+
+            <div id="resultado">
+
+                <p class="placeholder">
+                    Preencha os dados para gerar a análise climática.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <footer>
-    <p>© 2026 ClimaPlantio</p>
+
+<p>© 2026 ClimaPlantio</p>
+
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/global.js"></script>
+<script src="js/simulador.js"></script>
 
 </body>
 

@@ -1,0 +1,21 @@
+.team-hero{
+    padding-top:180px;
+    text-align:center;
+}
+
+.team-hero h1{
+    font-size:4rem;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    text-align:center;
+}
+
+@media(max-width:900px){
+    .team-grid{
+        grid-template-columns:1fr;
+    }
+}

@@ -1,0 +1,32 @@
+.faq-hero{
+    padding-top:180px;
+    text-align:center;
+}
+
+.faq-hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.faq-hero p{
+    color:#cbd5e1;
+}
+
+.faq{
+    display:grid;
+    gap:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+.item{
+    background:rgba(255,255,255,.04);
+    padding:25px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.item h3{
+    color:var(--green);
+    margin-bottom:10px;
+}
