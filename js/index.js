@@ -1,32 +1,24 @@
-const counters = document.querySelectorAll(".counter");
+function animarContadores() {
+  const contadores = document.querySelectorAll(".counter");
+  if (!contadores.length) return;
 
-counters.forEach(counter => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const alvo = parseInt(el.dataset.target, 10);
+      let atual = 0;
+      const passo = Math.ceil(alvo / 60);
+      const timer = setInterval(() => {
+        atual = Math.min(atual + passo, alvo);
+        el.textContent = atual.toLocaleString("pt-BR");
+        if (atual >= alvo) clearInterval(timer);
+      }, 20);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.4 });
 
-    const updateCounter = () => {
+  contadores.forEach(el => observer.observe(el));
+}
 
-        const target =
-        Number(counter.dataset.target);
-
-        const current =
-        Number(counter.innerText);
-
-        const increment =
-        target / 100;
-
-        if(current < target){
-
-            counter.innerText =
-            Math.ceil(current + increment);
-
-            setTimeout(updateCounter,20);
-
-        }else{
-
-            counter.innerText = target;
-        }
-
-    };
-
-    updateCounter();
-
-});
+document.addEventListener("DOMContentLoaded", animarContadores);
