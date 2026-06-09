@@ -1,58 +1,49 @@
-.mon-hero{
-    padding-top:180px;
-    padding-bottom:80px;
-    text-align:center;
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.mon-hero .tag{
-    color:var(--green);
-    text-transform:uppercase;
-    letter-spacing:3px;
+.monitor-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
 }
 
-.mon-hero h1{
-    font-size:4.5rem;
-    margin:30px 0;
-    line-height:1;
+.monitor-card__icone {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.mon-hero p{
-    max-width:700px;
-    margin:auto;
-    color:#cbd5e1;
+.monitor-card__label {
+  font-weight: 600;
+  color: var(--verde-escuro);
+  margin-bottom: 0.5rem;
 }
 
-.dashboard .grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    text-align:center;
+.monitor-card__valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--verde-claro);
 }
 
-.box{
-    padding:40px;
+.monitor-card__valor span {
+  font-size: 2rem;
 }
 
-.box h2{
-    font-size:3rem;
-    color:var(--green);
+.status-card .monitor-card__valor {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
-.status h2{
-    font-size:2rem;
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.center{
-    text-align:center;
-}
-
-@media(max-width:900px){
-
-    .dashboard .grid{
-        grid-template-columns:1fr;
-    }
-
-    .mon-hero h1{
-        font-size:2.5rem;
-    }
+@media (max-width: 480px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
 }
