@@ -1,30 +1,22 @@
-function gerarDados(){
+function gerarDados() {
+  const temp = 18 + Math.random() * 15;
+  const umidade = 45 + Math.random() * 45;
+  const chuva = Math.random() * 40;
 
-    const temp = document.getElementById("temp");
-    const umidade = document.getElementById("umidade");
-    const chuva = document.getElementById("chuva");
-    const status = document.getElementById("status");
-
-    const t = Math.floor(Math.random() * 15) + 20;
-    const u = Math.floor(Math.random() * 40) + 50;
-    const c = Math.floor(Math.random() * 30);
-
-    temp.innerText = t;
-    umidade.innerText = u;
-    chuva.innerText = c;
-
-    if(u > 70 && c < 10){
-        status.innerText = "FAVORÁVEL";
-        status.style.color = "#22c55e";
-    }
-
-    else if(u > 50){
-        status.innerText = "ATENÇÃO";
-        status.style.color = "#facc15";
-    }
-
-    else{
-        status.innerText = "CRÍTICO";
-        status.style.color = "#ef4444";
-    }
+  document.getElementById("temp").innerText = temp.toFixed(1);
+  document.getElementById("umidade").innerText = Math.floor(umidade);
+  document.getElementById("chuva").innerText = Math.floor(chuva);
+  
+  const statusEl = document.getElementById("status");
+  if (umidade > 70 && chuva < 15) {
+    statusEl.innerText = "🌿 FAVORÁVEL";
+    statusEl.style.color = "#22c55e";
+  } else if (umidade > 50) {
+    statusEl.innerText = "🔸 ATENÇÃO";
+    statusEl.style.color = "#facc15";
+  } else {
+    statusEl.innerText = "⚠️ CRÍTICO";
+    statusEl.style.color = "#ef4444";
+  }
 }
+window.onload = gerarDados;
